@@ -1,0 +1,10 @@
+SET a 5
+SET b foobar
+GET a
+> 5
+GET a
+> 5
+GET b
+> foobar
+GET c
+> NULL

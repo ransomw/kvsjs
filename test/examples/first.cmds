@@ -1,0 +1,20 @@
+SET a 5
+GET a
+> 5
+BEGIN
+GET a
+> 5
+SET a bar
+SET foobar memes
+GET foobar
+> memes
+ROLLBACK
+GET a
+> 5
+GET foobar
+> NULL
+BEGIN
+SET foobar memes2
+COMMIT
+GET foobar
+> memes2

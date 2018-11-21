@@ -1,0 +1,15 @@
+SET a 5
+BEGIN
+SET a 6
+BEGIN
+SET a 7
+GET a
+> 7
+ROLLBACK
+GET a
+> 6
+ROLLBACK
+GET a
+> 5
+ROLLBACK
+> Error: Not in a transaction
